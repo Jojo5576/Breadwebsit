@@ -1,0 +1,15 @@
+{
+  "name": "bread-website",
+  "version": "1.0.0",
+  "description": "Bread shop website with realtime chat",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.13.0"
+  },
+  "author": "You",
+  "license": "MIT"
+}
