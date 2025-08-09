@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Loaf Bakery — Bread & Chat 🍞</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Happy Loaf Bakery</h1>
+      <nav class="nav">
+        <a href="#breads">Breads</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="open-chat-btn" class="chat-toggle">Chat</button>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section id="hero" class="hero">
+      <div>
+        <h2>Fresh bread, baked daily.</h2>
+        <p>From sourdough to ciabatta — smell the warmth, taste the comfort.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?w=1200&q=80&auto=format&fit=crop" alt="Fresh bread" />
+    </section>
+
+    <section id="breads" class="products">
+      <h3>Our breads</h3>
+      <div class="grid">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1511689660979-5c2a9d3f1c2b?w=800&q=60&auto=format&fit=crop" alt="Sourdough">
+          <h4>Sourdough</h4>
+          <p>Crusty outside, airy inside — classic ferment.</p>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=60&auto=format&fit=crop" alt="Baguette">
+          <h4>Baguette</h4>
+          <p>Thin crust, tender crumb — great for sandwiches.</p>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1512058564366-c9e3e0e7f0a2?w=800&q=60&auto=format&fit=crop" alt="Rye">
+          <h4>Rye</h4>
+          <p>Rich flavor with caraway notes — hearty and bold.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h3>About us</h3>
+      <p>We bake small-batch bread using traditional methods and high-quality ingredients. Swing by or ask us anything in the chat — we love talking bread! 🍞</p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h3>Contact</h3>
+      <p>Email: hello@happyloaf.example</p>
+      <p>Phone: +47 123 45 678</p>
+    </section>
+  </main>
+
+  <!-- Chat widget -->
+  <div id="chat-widget" class="chat-widget hidden" aria-hidden="true">
+    <div class="chat-header">
+      <strong>Happy Loaf — Chat</strong>
+      <button id="close-chat-btn" class="close-btn" title="Close">✕</button>
+    </div>
+
+    <div id="chat-body" class="chat-body">
+      <div id="messages" class="messages"></div>
+    </div>
+
+    <form id="chat-form" class="chat-form" autocomplete="off">
+      <input id="name-input" type="text" placeholder="Your name" maxlength="30" />
+      <input id="message-input" type="text" placeholder="Say hi — press Enter to send" maxlength="300" />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <!-- Name modal (simple) -->
+  <div id="name-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="name-title">
+    <div class="modal-inner">
+      <h3 id="name-title">Welcome to Happy Loaf Chat!</h3>
+      <p>What's your name?</p>
+      <input id="modal-name" type="text" maxlength="30" placeholder="e.g. Ingrid" />
+      <div class="modal-actions">
+        <button id="modal-join">Join chat</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
